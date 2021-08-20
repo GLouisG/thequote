@@ -4,7 +4,8 @@
   <ul>
       <li *ngFor='let quote of quotes'>
         <p>{{quote.name}}</p>
-        <p>Uploaded:{{quote.uploadDate}}</p>
+        <p>Uploaded:{{quote.score}}</p>
+        <app-quote-info  [quote]='quote'></app-quote-info><!-- binding the property from quote to quote info -->
       </li>
   </ul>
 </div>
