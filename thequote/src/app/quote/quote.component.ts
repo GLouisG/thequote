@@ -13,6 +13,9 @@ export class QuoteComponent implements OnInit {
     new Quote(3, "It's Not About How Much We've Lost, It is About How Much We Have Left.", 'Tony Stark', 'Ken Muriuki', new Date(2021,3,2), 0),
 
   ];
+  toggleInfo(index:number){
+    this.quotes[index].showInfo = !this.quotes[index].showInfo;
+  }
   constructor() { }
 
   ngOnInit(): void {
