@@ -4,3 +4,15 @@
 .orangebtn{
   background-color: orange;
 }
+.container-fluid{
+  background: url('https://www.thoughtco.com/thmb/nLH-LR0i_I3V430R2STYsICpLDU=/4515x3009/filters:no_upscale():max_bytes(150000):strip_icc()/abacus-Lincoln-Mem-doric-73104001-crop-59dbef9bc412440011d3ef55.jpg');
+  background-size: cover;
+}
+.qHeader{
+  background-color: rgba(229, 252, 30, 0.753);
+  text-align: center;
+}
+h1{
+  text-align: center;
+  color: aliceblue;
+}
