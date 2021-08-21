@@ -13,6 +13,9 @@ export class QuoteComponent implements OnInit {
     new Quote(3, "It's Not About How Much We've Lost, It is About How Much We Have Left.", 'Tony Stark', 'Ken Muriuki', new Date(2021,3,2), 0),
 
   ];
+
+  likeds: Quote[]=[];
+
   addNewQuote(quote:any){
     let quotesLength = this.quotes.length;
     quote.id = quotesLength+1;
@@ -32,6 +35,15 @@ export class QuoteComponent implements OnInit {
   }
   dislikeClick(index:number){
     this.quotes[index].score--;
+  }
+  mostAppreciated(index:number){
+    this.likeds.splice(0, this.likeds.length);
+    
+    var largest = Math.max.apply(Math, this.quotes.map(function(o) { return o.score; }))
+
+    if (this.quotes[index].score = largest){
+      this.likeds.push(this.quotes[index]);
+    }
   }
   
   constructor() { }

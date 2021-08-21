@@ -10,9 +10,9 @@
         <p>{{quote.uploadDate|dateCount}} days ago</p>
         <div class="row">
           <div class="col-md-7">
-            <button class="btn orangebtn" (click)='appreciateClick(i)'>Appreciate🙏</button>
+            <button class="btn orangebtn" (click)='mostAppreciated(i)' (click)='appreciateClick(i)'>Appreciate🙏</button>
 
-            <button class="btn orangebtn"  (click)='dislikeClick(i)'>Dislike👎 </button>
+            <button class="btn orangebtn" (click)='mostAppreciated(i)'  (click)='dislikeClick(i)'>Dislike👎 </button>
           </div>
           <div class="col-md-5">
             <button class="btn orangebtn"  (click)='toggleInfo(i)'>Toggle Information</button>
@@ -34,5 +34,34 @@
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
   
+
+  <h2>Most Impactful</h2>
+      <div class="card quote-card"*ngFor='let quote of quotes;  let liked of likeds; let i = index'>
+        <p>{{liked.name}}</p>
+        <p>Score:{{liked.score}}</p>
+        <p>{{liked.uploadDate|dateCount}} days ago</p>
+        <div class="row">
+          <div class="col-md-7">
+            <button class="btn orangebtn" (click)='mostAppreciated(i)' (click)='appreciateClick(i)'>Appreciate🙏</button>
+
+            <button class="btn orangebtn"   (click)='dislikeClick(i)'>Dislike👎 </button>
+          </div>
+          <div class="col-md-5">
+            <button class="btn orangebtn"  (click)='toggleInfo(i)'>Toggle Information</button>
+          </div>
+          
+          
+          
+        </div>
+        
+        <div *ngIf='quote.showInfo'>
+          <app-quote-info (toDispose)='disposeQuote($event, i)' [quote]='quote'></app-quote-info><!-- binding the property from quote to quote info -->
+        </div>
+        <br><br>
+      </div>
+
+
+
+
 </div>
 </div>
