@@ -33,9 +33,11 @@ export class QuoteComponent implements OnInit {
   dislikeClick(index:number){
     this.quotes[index].score--;
   }
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  
 }

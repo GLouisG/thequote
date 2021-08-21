@@ -6,17 +6,16 @@
       <h2>Quotes</h2>
       <div class="card quote-card"*ngFor='let quote of quotes; let i = index'>
         <p>{{quote.name}}</p>
-        <p>{{quote.score}}</p>
+        <p>Score:{{quote.score}}</p>
         <p>{{quote.uploadDate|dateCount}} days ago</p>
         <div class="row">
-          <div class="col-md-4">
-            <button class="btn btn-info" (click)='appreciateClick(i)'>Appreciate🙏</button>
+          <div class="col-md-7">
+            <button class="btn orangebtn" (click)='appreciateClick(i)'>Appreciate🙏</button>
+
+            <button class="btn orangebtn"  (click)='dislikeClick(i)'>Dislike👎 </button>
           </div>
-          <div class="col-md-4">
-            <button class="btn btn-info"  (click)='dislikeClick(i)'>Dislike👎 </button>
-          </div>
-          <div class="col-md-4">
-            <button class="btn btn-info"  (click)='toggleInfo(i)'>Toggle Information</button>
+          <div class="col-md-5">
+            <button class="btn orangebtn"  (click)='toggleInfo(i)'>Toggle Information</button>
           </div>
           
           
