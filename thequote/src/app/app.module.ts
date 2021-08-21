@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { QuoteComponent } from './quote/quote.component';
 import { QuoteInfoComponent } from './quote-info/quote-info.component';
 import { DateCountPipe } from './date-count.pipe';
-import { AppreciateComponent } from './appreciate/appreciate.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +13,6 @@ import { AppreciateComponent } from './appreciate/appreciate.component';
     QuoteComponent,
     QuoteInfoComponent,
     DateCountPipe,
-    AppreciateComponent
   ],
   imports: [
     BrowserModule,
