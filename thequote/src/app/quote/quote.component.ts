@@ -21,6 +21,9 @@ export class QuoteComponent implements OnInit {
       this.quotes.splice(index,1);
     }
   }
+  appreciateClick(index:number){
+    this.quotes[index].score++;
+  }
   constructor() { }
 
   ngOnInit(): void {
