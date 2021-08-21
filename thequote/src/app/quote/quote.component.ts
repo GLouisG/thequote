@@ -16,6 +16,11 @@ export class QuoteComponent implements OnInit {
   toggleInfo(index:number){
     this.quotes[index].showInfo = !this.quotes[index].showInfo;
   }
+  disposeQuote(toDispose:any, index:number){
+    if (toDispose) {
+      this.quotes.splice(index,1);
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
