@@ -5,6 +5,7 @@
       <li *ngFor='let quote of quotes; let i = index'>
         <p>{{quote.name}}</p>
         <p>{{quote.score}}</p>
+        <p>{{quote.uploadDate|dateCount}} days ago</p>
         <button (click)='toggleInfo(i)'>Toggle Information</button>
         <div *ngIf='quote.showInfo'>
           <app-quote-info (toDispose)='disposeQuote($event, i)'  [quote]='quote'></app-quote-info><!-- binding the property from quote to quote info -->
