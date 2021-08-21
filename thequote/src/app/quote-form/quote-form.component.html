@@ -3,19 +3,21 @@
   <form (ngSubmit)='quoteSubmit()' #quoteForm='ngForm'>
     <div class="form-group">
       <label for="name">Quote</label>
-      <input type="text" required class="form-control" id="name">
+      <input type="text" required class="form-control" id="name" name="name" [(ngModel)]="newQuote.name" #name="ngModel">
     </div>
     <div class="form-group">
       <label for="author">Author</label>
-      <input type="text" required class="form-control" id="author">
+      <input type="text" required class="form-control" id="author" name="author" [(ngModel)]="newQuote.author" #author="ngModel">
     </div>
     <div class="form-group">
       <label for="poster">Poster</label>
-      <input type="text" required class="form-control" id="poster">
+      <input type="text" required class="form-control" id="poster" name="poster" [(ngModel)]="newQuote.poster" #poster="ngModel">
     </div>
     <div class="form-group">
       <label for="dispose">Date</label>
-      <input type="date" required class="form-control" id="dispose">
+      <input type="date" required class="form-control" id="dispose" name="uploadDate" [(ngModel)]="newQuote.uploadDate" #uploadDate="ngModel">
     </div>
+
+    <button type="submit" class="btn btn-success">Add Quote</button>
   </form>
 </div>
