@@ -24,6 +24,9 @@ export class QuoteComponent implements OnInit {
   appreciateClick(index:number){
     this.quotes[index].score++;
   }
+  dislikeClick(index:number){
+    this.quotes[index].score--;
+  }
   constructor() { }
 
   ngOnInit(): void {
