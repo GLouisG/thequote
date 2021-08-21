@@ -12,7 +12,7 @@
         <div *ngIf='quote.showInfo'>
           <app-quote-info (toDispose)='disposeQuote($event, i)'  [quote]='quote'></app-quote-info><!-- binding the property from quote to quote info -->
         </div>
-        
       </li>
   </ul>
+  <app-quote-form></app-quote-form>
 </div>
