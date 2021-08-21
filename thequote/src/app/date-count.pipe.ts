@@ -13,7 +13,11 @@ export class DateCountPipe implements PipeTransform {
     var differenceInSec = dateDifference*0.001;
     var durationCount = differenceInSec/secondsInDay;
 
-  
+    if(durationCount >= 1 && value < todayWithoutTime){
+      return durationCount;
+    }else{
+      return 0;
+    }
   }
 
 
