@@ -41,8 +41,8 @@ export class QuoteComponent implements OnInit {
     this.likeds.splice(0, this.likeds.length);
     
     var largest = Math.max.apply(Math, this.quotes.map(function(o) { return o.score; }))
-
-    if (this.quotes[index].score = largest){
+    
+    if (this.quotes[index].score == largest){//use two equal signs to fix liking issue
       this.likeds.push(this.quotes[index]);
     }
   }

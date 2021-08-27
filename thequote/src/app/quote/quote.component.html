@@ -10,9 +10,10 @@
         <p>{{quote.uploadDate|dateCount}} days ago</p>
         <div class="row">
           <div class="col-md-7">
-            <button class="btn orangebtn" (click)='mostAppreciated(i)' (click)='appreciateClick(i)'>Appreciate🙏</button>
+            <button class="btn orangebtn"  (click)='appreciateClick(i)' (click)='mostAppreciated(i)'>Appreciate🙏</button>
+           
 
-            <button class="btn orangebtn" (click)='mostAppreciated(i)'  (click)='dislikeClick(i)'>Dislike👎 </button>
+            <button class="btn orangebtn"   (click)='dislikeClick(i)' (click)='mostAppreciated(i)'>Dislike👎 </button>
           </div>
           <div class="col-md-5">
             <button class="btn orangebtn"  (click)='toggleInfo(i)'>Toggle Information</button>
@@ -42,7 +43,7 @@
       <p>{{liked.uploadDate|dateCount}} days ago</p>
       <div class="row">
         <div class="col-md-7">
-          <button class="btn orangebtn" (click)='mostAppreciated(i)' (click)='appreciateClick(i)'>Appreciate🙏</button>
+          <button class="btn orangebtn"  (click)='appreciateClick(i)' (click)='mostAppreciated(i)'>Appreciate🙏</button>
 
           <button class="btn orangebtn"   (click)='dislikeClick(i)'>Dislike👎 </button>
         </div>
