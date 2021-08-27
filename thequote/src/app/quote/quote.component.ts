@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Quote} from '../quote';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-quote',
@@ -43,13 +44,14 @@ export class QuoteComponent implements OnInit {
     var largest = Math.max.apply(Math, this.quotes.map(function(o) { return o.score; }))
     
     if (this.quotes[index].score == largest){//use two equal signs to fix liking issue
-      this.likeds.push(this.quotes[index]);
+       this.likeds.push(this.quotes[index]);
     }
   }
-  
+    
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
   

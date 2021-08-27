@@ -5,6 +5,9 @@
     <div class="col-md-6">
       <h2 class="qHeader">Quotes</h2>
       <div class="card quote-card"*ngFor='let quote of quotes; let i = index'>
+        <!-- <div *ngif="mostAppreciated">
+          <p>Most Liked!</p>
+        </div> -->
         <p>{{quote.name}}</p>
         <p>Score:{{quote.score}}</p>
         <p>{{quote.uploadDate|dateCount}} days ago</p>
@@ -45,7 +48,7 @@
         <div class="col-md-7">
           <button class="btn orangebtn"  (click)='appreciateClick(i)' (click)='mostAppreciated(i)'>Appreciate🙏</button>
 
-          <button class="btn orangebtn"   (click)='dislikeClick(i)'>Dislike👎 </button>
+          <button class="btn orangebtn"   (click)='dislikeClick(i)' (click)='mostAppreciated(i)'>Dislike👎 </button>
         </div>
         <div class="col-md-5">
           <button class="btn orangebtn"  (click)='toggleInfo(i)'>Toggle Information</button>
